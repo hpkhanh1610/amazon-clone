@@ -1,0 +1,28 @@
+- React ROUTER:
+  + reactrouter.com/web
+  + `npm install react-router-dom`
+  + import libraries + wrap in <Router></Router>: parent
+  + Route (children): determines what's going to load
+
+  + { Link } component: non-refresh way. Without this, the page will refresh
+  + `href` will refresh the page >< `<Link>` does not.
+
+- shortcut to create React functional component: `rfce` (ES7 react extension)
+
+- bem naming convention
+- NEED to install @material-ui/core for every project
+- !important: replace the rules of material-ui css, with our custom rule
+- emmet in vscode: go to settings, click option trigger expansion on TAB
+
+- padding vs margin:
+  + padding: add space inside the element
+  + margin: outside
+
+React: most important feature: just reload only a specific of components, not entire web page
+
+.product > img: if we dont want to create a className.
+ + product: parent class
+ + img: child tag
+
+- object.splice()
+- expr1 && expr2: If expr1 can be converted to true, returns expr2; else, returns expr1.
