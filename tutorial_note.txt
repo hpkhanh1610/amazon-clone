@@ -26,3 +26,8 @@ React: most important feature: just reload only a specific of components, not en
 
 - object.splice()
 - expr1 && expr2: If expr1 can be converted to true, returns expr2; else, returns expr1.
+
+Login:
+1. Redirect to homepage
+- history.push('/'): we want to `push` because when we hit back button, we can go back to that previous page.
+2. Listen to user's login/logout status and update the data layer

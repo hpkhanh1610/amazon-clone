@@ -1,25 +1,16 @@
 export const initialState = {
-  basket: [
-  {
-    id: "1234",
-    title: "New Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7) - Silver",
-    price: 2149,
-    rating: 4,
-    image: "https://m.media-amazon.com/images/I/71UItVa0VmL._AC_UY218_.jpg",
-  }, 
-  {
-    id: "1234",
-    title: "New Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7) - Silver",
-    price: 2149,
-    rating: 4,
-    image: "https://m.media-amazon.com/images/I/71UItVa0VmL._AC_UY218_.jpg",
-  }],
+  basket: [],
   user: null,
 }
 
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
+    case 'SET_USER': // update the user when they login/logout
+      return {
+        ...state,
+        user: action.user
+      }
     case 'ADD_TO_BASKET':
       // logic for adding item to basket
       return { 

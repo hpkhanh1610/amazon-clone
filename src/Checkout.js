@@ -14,6 +14,7 @@ function Checkout() {
           alt="" 
           className="checkout__ad"
         />
+
         {basket?.length === 0 ? (
           <div>
             <h2>Your Shopping Basket is empty</h2>
@@ -39,9 +40,12 @@ function Checkout() {
           </div>
         )}
       </div>
-      {/* {basket.length > 0 && (
-
-      )} */}
+      
+      {basket.length > 0 && (
+        <div className="checkout__right">
+          <h1>Subtotal</h1>
+        </div>  
+      )}
     </div>
   )
 }
