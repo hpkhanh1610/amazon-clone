@@ -31,3 +31,32 @@ Login:
 1. Redirect to homepage
 - history.push('/'): we want to `push` because when we hit back button, we can go back to that previous page.
 2. Listen to user's login/logout status and update the data layer
+
+
+*** React context API ***
+- setup data layer: allows us to push data into it, store it
+then can access/use it from anywhere inside our react app (avoid `prop drilling` nightmare)
+
+- 3 main parts:
++ create `StateProvider.js`: just follow the pattern, no need to understand
++ go to `index.js`, wrap the entire App inside <StateProvider> created inside `StateProvider.js`
++ create `reducer.js`: data layer logics inside here, then pass logic to `index.js`
+
+const [state, dispatch] = useStateValue()
++ state: current state of data layer: {basket} - destructuring
++ dispatch: an action
+when we dispatch an action inside a component, we listen to this action in a reducer. When that came in,
+we have mutable update
+
+return { 
+        ...state,
+        basket: [...state.basket, action.item],
+      }
+-> return a new object with the current `state`, then update the `basket`
+value inside that `state`. The result
+
+******
+
+- auth.onAuthStateChanged: an observer for changes to the user's sign-in state
+the observer is only triggered on sign-in or sign-out.
+after running auth signin or auth.singOut, it will trigger this observer to run.
